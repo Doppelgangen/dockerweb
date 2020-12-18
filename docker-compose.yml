@@ -1,0 +1,4 @@
+app-web:
+    build: ./web
+    ports:
+        - "8081:8080"
