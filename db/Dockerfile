@@ -1,7 +1,7 @@
 FROM postgres:12-alpine
 LABEL maintainer="Viktor Makarov"
 
-COPY data/. /var/lib/postgresql/data/
+COPY ./init/ /docker-entrypoint-initdb.d/
 ENV POSTGRES_USER postgres  
 ENV POSTGRES_PASSWORD 123
 EXPOSE 5432
