@@ -2,3 +2,10 @@ app-web:
     build: ./web
     ports:
         - "8081:8080"
+    links: 
+        - app-db
+        
+app-db:
+    build: ./db
+    volumes:
+    - ./db/data:/var/lib/postgresql/data
