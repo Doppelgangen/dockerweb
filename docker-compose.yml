@@ -7,5 +7,3 @@ app-web:
         
 app-db:
     build: ./db
-    volumes:
-    - ./db/data/:/var/lib/postgresql/data/

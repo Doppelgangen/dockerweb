@@ -1,5 +1,5 @@
 file="/docker-entrypoint-initdb.d/dump.pgdata"
-dbname=webdb
+dbname=postgres
 
 echo "Restoring DB using $file"
-pg_restore -U postgres --dbname=$dbname --verbose --single-transaction < "$file" || exit 1
+psql -U postgres postgres < /docker-entrypoint-initdb.d/dump.pgdata
